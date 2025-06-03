@@ -71,7 +71,7 @@ const onTouchEnd = (e: TouchEvent) => {
 <template>
   <div class="container">
     <h1 class="title">🐾 Paws & Preferences</h1>
-    <div class="swipe-hint">
+    <div v-if="!isDone()" class="swipe-hint">
       <span>⬅️ Swipe left to dislike</span>
       <span>Swipe right to like ➡️</span>
     </div>
