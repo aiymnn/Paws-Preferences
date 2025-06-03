@@ -71,6 +71,10 @@ const onTouchEnd = (e: TouchEvent) => {
 <template>
   <div class="container">
     <h1 class="title">🐾 Paws & Preferences</h1>
+    <div class="swipe-hint">
+      <span>⬅️ Swipe left to dislike</span>
+      <span>Swipe right to like ➡️</span>
+    </div>
 
     <div v-if="isLoading" class="loading">Loading cute cats...</div>
 
@@ -117,6 +121,18 @@ const onTouchEnd = (e: TouchEvent) => {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #4b5563;
+}
+
+.swipe-hint {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.95rem;
 }
 
 .loading {
